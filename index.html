@@ -212,8 +212,8 @@
             { title: "Current Time", info: "1:35 PM." },
             { title: "Address of Origin", info: "813 Davis St, Sun Prairie, WI 53590." },
             { title: "Address of Destination", info: "4065 Observatory Rd, Cross Plains, WI 53528." },
-            { title: "Distance to Destination", info: "0" },
-            { title: "Estimated Time to Destination", info: "0" },
+            { title: "Distance to Destination", info: "34.90 miles." },
+            { title: "Estimated Time to Destination", info: "54 minutes." },
             { title: "State of Charge of Battery", info: "44% charge." },
             { title: "Range of Current Battery", info: "132 minutes." },
             { title: "Estimated Drive Distance with Current Charge", info: "99 miles." },
@@ -230,11 +230,11 @@
                 imageUrl: 'https://photos.plugshare.com/photos/561129.jpg',
                 name: 'Willy Street Co-op North',
 
-                location: '2817 N Sherman Ave, Madison 53704',
-                originDistance: ' Miles',
-                originTime: ' Minutes',
-                destDistance: ' Miles ',
-                destTime: ' Minutes',
+                location: '2817 M Sherman Ave, Madison 53704',
+                originDistance: '14.55',
+                originTime: '21',
+                destDistance: '22.83',
+                destTime: '46',
 
                 waitTime: [
                         { type: 'J1772', value: '0' }
@@ -269,11 +269,11 @@
                 imageUrl: 'https://photos.plugshare.com/photos/479282.jpg',
                 name: 'Piggly Wiggly',
 
-                location: '28 Glaciers Edge Square, Cross Plains 53528',
-                originDistance: ' Miles',
-                originTime: ' Minutes',
-                destDistance: ' Miles ',
-                destTime: ' Minutes',
+                location: '29 Glaciers Edge Square, Cross Plains 53528',
+                originDistance: '36.19',
+                originTime: '40',
+                destDistance: '4.84',
+                destTime: '17',
                 
                 waitTime: [
                         { type: 'J1772', value: '0' }
@@ -935,8 +935,8 @@
         // Add route time/distance to instructions & update charging station details
         map.on('load', async () => {
             await getRoute(0); // Ensure this is awaited properly
-            await updateAndDisplayRouteInstructions();  // Ensure this is awaited properly
-            await updateChargingStationDetails();  // Ensure this is awaited properly
+            // await updateAndDisplayRouteInstructions();  // Ensure this is awaited properly
+            // await updateChargingStationDetails();  // Ensure this is awaited properly
             addChargingStations();  // You might need to re-add stations to reflect updated data
         });
 
